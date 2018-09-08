@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name = "com.ideas2it.employeemanagementsystem.model.Employee" 
+       table = "employee"> 
+       <meta attribute = "class-description">
+           Describes about the employee information. 
+       </meta>
+      
+       <id name = "id" type = "int" column = "id">
+           <generator class="increment"/>
+       </id>
+       <property name = "name" column = "name" type = "string"/>
+       <property name = "designation" column = "designation" type = "string"/>
+       <property name = "mailId" column = "mailid" type = "string"/>
+       <property name = "status" column = "status" type = "string"/>
+       <property name = "mobileNumber" column = "mobilenumber" type = "long"/>
+       <property name = "dob" column = "dob" type = "date"/> 
+  
+       <set name = "projects" table = "projectmembers" cascade ="delete-orphan">
+           <key column="employeeid" /> 
+       <many-to-many class = 
+        "com.ideas2it.employeemanagementsystem.model.Project"
+         column="projectid"/>
+       </set>
+
+       <bag name = "addresses" cascade = "all"> 
+           <key column = "employeeid"/>
+           <one-to-many class = 
+            "com.ideas2it.employeemanagementsystem.model.Address"/>
+       </bag>
+   </class>
+</hibernate-mapping>

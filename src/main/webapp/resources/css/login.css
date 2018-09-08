@@ -1,0 +1,126 @@
+body {
+font-family: Arial, Helvetica, sans-serif; 
+
+}
+
+/* Full-width input fields */
+input[type=text],input[type=email]{
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+ margin-left:35px;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+   font-size:20px;
+    border: none;
+    cursor: pointer;
+ border-radius:25px;
+    width: 100%;
+margin-top:10px;
+margin-left:10px;
+}
+
+.password {
+ width: 30%;
+    padding: 12px 20px;
+    margin-left:20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+
+    box-sizing: border-box;
+
+}
+
+#password {
+ width: 30%;
+    padding: 12px 20px;
+    margin-left:19px;
+ margin-top:3px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+.submitBUTTON{
+ display: inline-block;
+ background: linear-gradient(to right, #4097FF, #31B39B); 
+padding: 20px;
+ border-radius: 50px; 
+color: white; 
+text-align: center;
+ font-weight: 600;
+ font-size: 20px;
+ vertical-align: middle;
+ margin-left: 2%;
+ margin-top: 10px;
+width:170px;
+ transition: ease .3s;
+
+}
+
+
+
+center.register_Solid {
+height:500px;
+margin:auto;
+margin-top:150px;
+width:1000px;
+border-style: solid;
+background-color:#f9ddff;
+
+}
+
+center.solid {
+height:300px;
+margin:auto;
+margin-top:250px;
+width:1000px;
+border-style: solid;
+background-color:#f9ddff;
+}
+#otp{
+margin-left:55px;
+
+}
+
+#password{
+margin-left:5px;
+
+}
+#myDIV{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+   font-size:20px;
+    border: none;
+    cursor: pointer;
+ border-radius:25px;
+    width: 100%;
+margin-top:10px;
+margin-left:10px;
+
+
+
+}
+center {
+margin-top:100px;
+}
+
+.login {
+margin-left:5px;
+}
+
+a {
+margin-top:10px;
+margin-left:10px;
+}
+

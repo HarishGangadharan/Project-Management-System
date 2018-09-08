@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="
+http://www.springframework.org/schema/beans 
+classpath:/org/springframework/beans/factory/xml/spring-beans-3.0.xsd ">      
+
+<bean id="OtpService" class="com.ideas2it.employeemanagementsystem.service.impl.OtpServiceImpl"/>
+
+<bean id = "EmployeeController" class = "com.ideas2it.employeemanagementsystem.controller.EmployeeController">
+<property name = "employeeService" ref = "EmployeeService">
+</property>
+
+</bean>
+
+<bean id="EmployeeService" class="com.ideas2it.employeemanagementsystem.service.impl.EmployeeServiceImpl">
+<property name="employeeDao" ref="EmployeeDao">
+</property>
+
+<property name="projectService" ref="ProjectService">
+</property>
+</bean>
+<bean id="EmployeeDao" class="com.ideas2it.employeemanagementsystem.dao.impl.EmployeeDaoImpl"/>
+
+
+
+
+<bean id = "ProjectController" class = "com.ideas2it.employeemanagementsystem.controller.ProjectController">
+<property name = "projectService" ref = "ProjectService">
+</property>
+
+</bean>
+
+<bean id="ProjectService" class="com.ideas2it.employeemanagementsystem.service.impl.ProjectServiceImpl">
+<property name="projectDao" ref="ProjectDao">
+</property>
+<property name="employeeService" ref="EmployeeService">
+</property>
+</bean>
+<bean id="ProjectDao" class="com.ideas2it.employeemanagementsystem.dao.impl.ProjectDaoImpl"/>
+
+
+
+
+
+<bean id = "ClientController" class = "com.ideas2it.employeemanagementsystem.controller.ClientController">
+<property name = "clientService" ref = "ClientService">
+</property>
+
+</bean>
+
+<bean id="ClientService" class="com.ideas2it.employeemanagementsystem.service.impl.ClientServiceImpl">
+<property name="clientDao" ref="ClientDao">
+</property>
+
+<property name="projectService" ref="ProjectService">
+</property>
+</bean>
+<bean id="ClientDao" class="com.ideas2it.employeemanagementsystem.dao.impl.ClientDaoImpl"/>
+
+
+
+
+
+
+<bean id = "AdminController" class = "com.ideas2it.employeemanagementsystem.controller.AdminController">
+<property name = "adminService" ref = "AdminService">
+</property>
+
+</bean>
+
+<bean id="AdminService" class="com.ideas2it.employeemanagementsystem.service.impl.AdminServiceImpl">
+<property name="adminDao" ref="AdminDao">
+</property>
+
+<property name="otpService" ref="OtpService">
+</property>
+
+
+</bean>
+<bean id="AdminDao" class="com.ideas2it.employeemanagementsystem.dao.impl.AdminDaoImpl"/>
+
+
+
+</beans>
