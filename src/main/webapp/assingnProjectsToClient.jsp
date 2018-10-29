@@ -21,7 +21,7 @@
       <div></div>
       </form>
       <form:form  action = "clientOperation" commandName = "client" method ="post">
-         <table id="projects">
+         <table id="employees">
             <thead>
                <tr>
                   <th>Id</th>
@@ -89,19 +89,19 @@
       <c:choose>
          <c:when test = "${projectMembers != 'projectMembers'}">
             <input type=hidden name = id value= "${client.id}">
-            <input class = "addEmployee" type="submit"  name = "assign" value = "Assign${client.id}"/>
+            <input class = "addEmployee" type="submit"  name = "assign" value = "Assign"/>
          </c:when>
          <c:when test = "${projectMembers == 'projectMembers'}">
             <table>
                <tr>
                   <th>
                         <input type=hidden name = clientId value= "${client.id}">
-                        <input class = "addProject" type="submit"  name = "AddProject" value = "AddProjects${client.id}"/>
+                        <input class = "addProject" type="submit"  name = "AddProject" value = "AddProjects"/>
                      </form>
                   </th>
                   <th>
                         <input type=hidden name = id value= "${client.id}">
-                        <input class = "addProject" type="submit"  name = "UpdateClient" value = "UpdateClient${client.id}"/>
+                        <input class = "addProject" type="submit"  name = "UpdateClient" value = "UpdateClient"/>
 
                   </th>
                </tr>

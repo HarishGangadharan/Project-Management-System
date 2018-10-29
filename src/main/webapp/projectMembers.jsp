@@ -23,7 +23,7 @@
       <div></div>
       </form>
       <form:form  id = "myform3"  action = "projectOperation" commandName = "project" method ="post">
-         <table id="projects">
+         <table id="employees">
             <thead>
                <tr>
                   <th>Id</th>

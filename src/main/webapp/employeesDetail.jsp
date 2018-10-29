@@ -4,8 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-   <style>
-   </style>
+  
    <head>
       <meta charset="utf-8">
       <link rel="icon" href="resources/images/employeetab.png" type="image/gif" sizes="16x16">
@@ -14,7 +13,10 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <link rel="stylesheet" type="text/css" href="format.css"/>
-   </head>
+   
+       
+    </head>
+
    <body>
       <jsp:include page="header.jsp" >
          <jsp:param name="attribute" value="employee" />
@@ -24,7 +26,7 @@
          <div>
             <input type="text" style = "width:50%;" placeholder="Enter your file name and file will be located in files folder" name="filename" maxlength="10" title="Enter a valid name" value= "" required>
             <input type=hidden name = status value= ${employee.status}>
-            <input class = "submit" style = "width:10%; "  type="submit"  name = "choice" value = "CreateFile"/>
+            <input class = " submit " style = "width:10%; "  type="submit"  name = "choice" value = "CreateFile"/>
             <c:choose>
                <c:when test = "${isFilePresent == true}">
                   <a href="${file}" download>
@@ -35,7 +37,9 @@
             </c:choose>
 
 &nbsp Number of Employees
-<input  type = "text" value = ""  id = "length" readonly> 
+<input  style = "    margin-left: 14px;
+    width: 62px;
+" type = "text" value = ""  id = "length" readonly> 
 
 
          </div>
@@ -138,6 +142,5 @@
 
 
       <%@ include file="/js/Common.js" %>
-      <%@ include file="footer.html" %>
    </body>
 </html>

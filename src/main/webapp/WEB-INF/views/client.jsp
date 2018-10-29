@@ -213,7 +213,6 @@ pincode
       </div>
       </form:form>
       </center>
-      <%@ include file="footer.html" %>
    </body>
 <c:choose>
          <c:when test = "${response != null }">

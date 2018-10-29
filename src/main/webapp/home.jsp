@@ -3,9 +3,26 @@
    <head>
       <title>Home</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="ff.css">
+      <link rel="stylesheet" href="stylesheet.css">
    </head>
-   <body>
+   <style>
+     .b-color{
+      background-color: #f7cfa3;
+     }
+     .width-100{
+       width: 100%;
+     }
+     .text-align-center{
+       text-align: center;
+     }
+
+     .m-top{
+       margin-top: 5%;
+     }
+   
+   
+   </style>
+   <body class="b-color">
       <header>
          <table>
             <tr>
@@ -53,25 +70,25 @@ ${admin.getName()}
 
       <section>
 
-         <div class="slideshow-container">
+         <div class="slideshow-container m-top">
 
             <div class="mySlides fade">
-               <img src="resources/images/1.jpg" style="width:100%">
+               <img src="resources/images/1.jpg" class="width-100">
             </div>
             <div class="mySlides fade">
-               <img src="resources/images/final.jpg" style="width:100%">
+               <img src="resources/images/final.jpg" class="width-100">
             </div>
             <div class="mySlides fade">
-               <img src="resources/images/4.jpg" style="width:100%">
+               <img src="resources/images/4.jpg"class="width-100">
             </div>
             <div class="mySlides fade">
-               <img src="resources/images/3.jpg" style="width:100%">
+               <img src="resources/images/3.jpg" class="width-100">
             </div>
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
          </div>
          <br>
-         <div style="text-align:center">
+         <div class="text-align-center">
             <span class="dot" onclick="currentSlide(1)"></span> 
             <span class="dot" onclick="currentSlide(2)"></span> 
             <span class="dot" onclick="currentSlide(3)"></span> 
@@ -109,6 +126,5 @@ ${admin.getName()}
          </script>
       </section>
 
-      <%@ include file="footer.html" %>
    </body>
 </html>

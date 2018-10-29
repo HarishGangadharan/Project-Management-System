@@ -36,7 +36,8 @@
             </c:choose>
 
 &nbsp Number of Clients
-<input  type = "text" value = ""  id = "length" readonly> 
+<input  type = "text" value = ""  id = "length" readonly style = "    margin-left: 1%;
+    width: 5%;"> 
 
 
          </div>
@@ -131,7 +132,6 @@
          </c:when>
       </c:choose>
       <%@ include file="/js/Common.js" %>
-      <%@ include file="footer.html" %>
    </body>
 <script>
     var x = document.getElementById("employees").rows.length;

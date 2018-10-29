@@ -16,5 +16,4 @@
 <h2> Page not found </h2>       
       </center>
    </body>
-      <%@ include file="footer.html" %>
 </html>

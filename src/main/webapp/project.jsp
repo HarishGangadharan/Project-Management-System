@@ -12,7 +12,7 @@
       </jsp:include>
       <center> Project Information </center>
 
-      <form:form action = "projectOperation" commandName = "project" method ="post">
+      <form:form action = "projectOperation" id = "projectDetails" commandName = "project" method ="post">
          <table align = 'center'>
             <tr>
                <td align='center'> <img src="resources/images/account.png"/></td>
@@ -86,6 +86,5 @@
       </div>
 </form:form>
       </center>
-      <%@ include file="footer.html" %>
    </body>
 </html>

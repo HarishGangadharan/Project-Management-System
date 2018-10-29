@@ -129,7 +129,6 @@
          </c:when>
       </c:choose>
       <%@ include file="/js/Common.js" %>
-      <%@ include file="footer.html" %>
    </body>
 <script>
     var x = document.getElementById("employees").rows.length;

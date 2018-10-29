@@ -86,6 +86,5 @@
       </div>
 </form:form>
       </center>
-      <%@ include file="footer.html" %>
    </body>
 </html>

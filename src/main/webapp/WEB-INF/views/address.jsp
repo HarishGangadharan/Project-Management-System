@@ -297,5 +297,4 @@ maxlength = "6"/><br /></td>
 
    </body>
    <%@ include file="/js/Common.js" %>
-   <%@ include file="footer.html" %>
 </html>

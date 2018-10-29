@@ -18,7 +18,25 @@
 
 
         
-                  <table align= "center">
+
+<c:choose>
+                        <c:when test = "${client.name == null}">
+  <table align= "center">
+
+
+</c:when>
+                     </c:choose>
+
+<c:choose>
+                        <c:when test = "${client.name != null}">
+  <table style = "    display: inline-block;
+    margin-left: 11%;">
+
+
+</c:when>
+                     </c:choose>
+ 
+
 
                      <c:choose>
                         <c:when test = "${client.name != null}">
@@ -57,8 +75,10 @@
 <c:forEach items="${client.addresses}"  var = "address" varStatus="vs">
 
 <c:if test = "${address.type == 'temporary'}">
-<h2>Temporary Address </h2>
-                  <table align= "center">
+
+ <table style = "    margin-bottom: 1%;
+    display: inline-block;
+    margin-left: 7%;">
 <tr>
 <td>
 Address
@@ -106,9 +126,11 @@ pincode
 
 
 <c:if test = "${address.type == 'permanent'}">
-<h2>Permanent Address</h2>
 
-                  <table align= "center">
+
+ <table style = "    margin-bottom: 1%;
+    display: inline-block;
+    margin-left: 7%;">
 <tr>
 <td>
 Address
@@ -213,7 +235,6 @@ pincode
       </div>
       </form:form>
       </center>
-      <%@ include file="footer.html" %>
    </body>
 <c:choose>
          <c:when test = "${response != null }">

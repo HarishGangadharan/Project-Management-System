@@ -34,7 +34,8 @@
             </c:choose>
 
 &nbsp Number of projects
-<input  type = "text" value = ""  id = "length" readonly> 
+<input  type = "text" value = ""  id = "length" readonly style = "    width: 5%;
+    margin-left: 1%;"> 
 
 
          </div>
@@ -129,7 +130,6 @@
          </c:when>
       </c:choose>
       <%@ include file="/js/Common.js" %>
-      <%@ include file="footer.html" %>
    </body>
 <script>
     var x = document.getElementById("employees").rows.length;

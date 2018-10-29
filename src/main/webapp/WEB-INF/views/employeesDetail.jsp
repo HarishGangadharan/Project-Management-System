@@ -4,8 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-   <style>
-   </style>
+ 
    <head>
       <meta charset="utf-8">
       <link rel="icon" href="resources/images/employeetab.png" type="image/gif" sizes="16x16">
@@ -15,6 +14,16 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <link rel="stylesheet" type="text/css" href="format.css"/>
    </head>
+   <style>
+            .width-50{
+      
+                  width:50%;
+            }
+            .width-10{
+      
+      width:10%;
+}
+         </style>
    <body>
       <jsp:include page="header.jsp" >
          <jsp:param name="attribute" value="employee" />
@@ -22,9 +31,9 @@
       <center> All Employees Information </center>
       <form  action = "createFile" method ="post">
          <div>
-            <input type="text" style = "width:50%;" placeholder="Enter your file name and file will be located in files folder" name="filename" maxlength="10" title="Enter a valid name" value= "" required>
+            <input type="text" class = "width-50" placeholder="Enter your file name and file will be located in files folder" name="filename" maxlength="10" title="Enter a valid name" value= "" required>
             <input type=hidden name = status value= ${employee.status}>
-            <input class = "submit" style = "width:10%; "  type="submit"  name = "choice" value = "CreateFile"/>
+            <input class = "submit" class = "width-10" type="submit"  name = "choice" value = "CreateFile"/>
             <c:choose>
                <c:when test = "${isFilePresent == true}">
                   <a href="${file}" download>
@@ -138,6 +147,5 @@
 
 
       <%@ include file="/js/Common.js" %>
-      <%@ include file="footer.html" %>
    </body>
 </html>

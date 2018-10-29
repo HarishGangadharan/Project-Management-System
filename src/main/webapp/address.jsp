@@ -8,6 +8,17 @@
    <head>
       <link rel="stylesheet" type="text/css" href="format.css"/>
    </head>
+
+<style>
+
+.tempAddressTable{
+
+    margin-bottom: 1%;
+    margin-left: 28%;
+    display: inline-block;
+
+}
+</style>
    <body>
       <jsp:include page="header.jsp" >
          <jsp:param name="attribute" value="ProjectController" />
@@ -27,7 +38,8 @@
 
 
 <c:if test = "${address.type == 'permanent'}">
-                  <table class = "permanentTable">
+                  <table class = "permanentTable" style = "    display: inline-block;
+    margin-left: 13%;">
 
 
                      <tr>
@@ -87,7 +99,10 @@ maxlength = "6"/><br /></td>
 
 
 <c:if test = "${address.type == 'temporary'}">
-                  <table class = "temporaryTable">
+                  <table class = "temporaryTable" style = " margin-bottom: 1%;
+    margin-left: 19%;
+    display: inline-block;
+">
 
                        <form:input path="addresses[${vs.index}].type" type="hidden" />
 
@@ -170,7 +185,9 @@ maxlength = "6"/><br /></td>
 
 
 <c:if test = "${address.type == 'permanent'}">
-                  <table class = "permanentTable">
+ <table class = "permanentTable" style = "    display: inline-block;
+    margin-left: 13%;">
+
 
 
                      <tr>
@@ -228,7 +245,10 @@ maxlength = "6"/><br /></td>
 
 
 <c:if test = "${address.type == 'temporary'}">
-                  <table class = "temporaryTable">
+  <table class = "temporaryTable" style = " margin-bottom: 1%;
+    margin-left: 19%;
+    display: inline-block;
+">
 
                        <form:input path="addresses[${vs.index}].type" type="hidden" />
 
@@ -297,5 +317,4 @@ maxlength = "6"/><br /></td>
 
    </body>
    <%@ include file="/js/Common.js" %>
-   <%@ include file="footer.html" %>
 </html>

@@ -8,7 +8,25 @@
    <head>
       <link rel="icon" href="images/employeetab.png" type="image/gif" sizes="16x16">
       <link rel="stylesheet" type="text/css" href="format.css"/>
+      
 </head>
+<style>
+.display-inline-block-table{
+  display: inline-block;
+    margin-left: 11%;
+
+
+
+
+}
+.table-align{
+  margin-bottom: 4%; 
+     display: inline-block;   
+      margin-left: 7%;
+}
+
+
+</style>
 
    <body>
       <jsp:include page="header.jsp" >
@@ -19,9 +37,24 @@
 
       <form:form action = "employeeOperation" commandName = "employee" method ="post">
 
+<c:choose>
+                        <c:when test = "${employee.name == null}">
+  <table align= "center">
 
-     
-                  <table align = "center">
+
+</c:when>
+                     </c:choose>
+
+<c:choose>
+                        <c:when test = "${employee.name != null}">
+  <table class = "display-inline-block-table ">
+
+
+</c:when>
+                     </c:choose>
+ 
+
+
 
                      <c:choose>
                         <c:when test = "${employee.name != null}">
@@ -65,11 +98,11 @@
 <c:forEach items="${employee.addresses}"  var = "address" varStatus="vs">
 
 <c:if test = "${address.type == 'temporary'}">
-<h2>Temporary Address </h2>
-                  <table align= "center">
+
+      <table class = "table-align">
 <tr>
 <td>
-Address
+Temp. Address
 <td>
 <td>
                        <form:input path="addresses[${vs.index}].type" type="hidden" />
@@ -122,12 +155,13 @@ pincode
 
 
 <c:if test = "${address.type == 'permanent'}">
-<h2>Permanent Address</h2>
 
-                  <table align= "center">
+
+    <table class = "table-align">
+
 <tr>
 <td>
-Address
+Perm.Address
 <td>
 <td>
                        <form:input path="addresses[${vs.index}].type" type="hidden" />
@@ -231,7 +265,6 @@ pincode
      $('.loader').hide();
   });
 </script>
-      <%@ include file="footer.html" %>
    </body>
 <c:choose>
          <c:when test = "${response != null }">

@@ -231,7 +231,6 @@ pincode
      $('.loader').hide();
   });
 </script>
-      <%@ include file="footer.html" %>
    </body>
 <c:choose>
          <c:when test = "${response != null }">
